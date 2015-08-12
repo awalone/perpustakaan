@@ -1,0 +1,57 @@
+<?php
+
+		class General {
+			
+				var $ci;
+				
+				function __construct() {
+						$this->ci =& get_instance();	
+				}	
+				
+				
+				function isLogin() {
+						if ($this->ci->session->userdata('is_login') == TRUE) {
+								return TRUE;	
+						}	
+						else {
+								return FALSE;	
+						}
+				}
+				
+				
+				function isAdmin() {
+						if ($this->ci->session->userdata('userLevel') == 'admin') {
+								return TRUE;
+							}	
+						else {
+								return FALSE;
+							}
+				}
+				
+				function isUser() {
+						if ($this->ci->session->userdata('userLevel') == 'pegawai') {
+								return TRUE;	
+							}
+						else {
+								return FALSE;	
+							}
+					}
+			
+			
+			//untuk mengecek
+			function checkAdmin() {
+					if (($this->isLogin() && $this->isAdmin()) != TRUE) {
+								$this->ci->session->set_flashdata('errorAccess', 'Maaf Anda Tidak Memiliki Hak Akses Sebagai Admin');
+								//menuju ke halaman login
+								redirect('login/login');
+						}	
+			}
+			function checkUser() {
+					if (($this->isLogin() && $this->isUser()) != TRUE) {
+								$this->ci->session->set_flashdata('errorAccess', 'Maaf Anda Tidak Memiliki Hak Akses Sebagai User');
+						}
+				}
+			
+		}
+
+?>

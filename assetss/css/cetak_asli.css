@@ -1,0 +1,92 @@
+body {
+   font-family: Arial;
+   font-size: 11pt;
+   width: 21.56cm;
+   margin: 50mm 21mm 0mm 16mm;
+}
+#wrap {
+	width: 175mm;
+	*padding: 0px;
+	*margin: 0px;
+}
+#container {
+	min-height: 300px;
+	*padding: 56mm 12mm 0mm 16mm;
+	margin: 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+   padding: 2px 0px;
+   margin: 0px;
+   text-weight: bolder;
+}
+
+.logo {
+	width: 100px;
+	height: 100px;
+	float: left;
+	margin-left: 20px;
+}
+
+h3 {
+	font-size: 25px;
+}
+h4 {
+	font-size: 4.7mm;
+	
+}
+h5 {
+	font-size: 4.5mm;	
+}
+
+.right {
+	float: right;
+	text-align: right;
+	width: 100%;
+	margin-top: -14px;
+	
+}
+
+.center {
+
+	display: block;
+	font-size: 14px;
+	*width: 500px;
+	margin-left: -20px;
+}
+
+.kotakTandaTerima {
+	float: left;
+	text-transform: uppercase;
+	width: 200px;
+	border: 1px solid;
+	padding: 2px 5px;
+}
+
+hr {
+   clear: both;
+}
+
+img {
+   margin: 2px;
+}
+
+div.page-portrait-list {
+   visibility: visible;
+   font-family: Tahoma;
+   font-size: 11px;
+   margin: auto;
+   width: 19cm;
+}
+.tebal { font-weight: bold }
+ .foto {
+ width:25mm; 
+ height:30mm; 
+ display:table-cell;
+ vertical-align:middle; 
+ text-align:center; 
+ border:1px solid;
+ }
+.tembusan { font-size:15px}
+.ttd {font-size:12pt; line-height: 18px; text-align: left; *display: table-cell; }
+.ket {float:right; width:95%}

@@ -1,0 +1,142 @@
+@keyframes myfirst
+{
+from { opacity: 1.0; }
+  to { opacity: 0.0; }
+}
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+from {background: red;}
+to {background: yellow;}
+}
+.css3-blink {
+font-size:25px;
+animation-name:myfirst;
+animation-duration:1s;
+animation-timing-function:linear;
+animation-delay:2s;
+animation-iteration-count:infinite;
+
+-webkit-animation:myfirst 1s; /* Safari and Chrome */
+-webkit-animation-name:myfirst;
+-webkit-animation-duration:5s;
+-webkit-animation-timing-function:linear;
+-webkit-animation-delay:2s;
+-webkit-animation-iteration-count:infinite;
+-webkit-animation-direction:alternate;
+-webkit-animation-play-state:running;
+font-weight: bold;
+color: blue;
+}			
+body {
+   font-family: Arial;
+   font-size: 11px;
+   width: 70%;
+   margin:15mm;
+}
+.btn-primary {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #006dcc;
+  *background-color: #0044cc;
+  background-image: -moz-linear-gradient(top, #0088cc, #0044cc);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0044cc));
+  background-image: -webkit-linear-gradient(top, #0088cc, #0044cc);
+  background-image: -o-linear-gradient(top, #0088cc, #0044cc);
+  background-image: linear-gradient(to bottom,  #0088cc, #0044cc);
+  background-repeat: repeat-x;
+  border-color: #0044cc #0044cc #002a80;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0044cc', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  font-size:25px
+}
+#wrap {
+	width: 216mm;
+	padding: 0px;
+	margin: 0px;
+}
+#container {
+	min-height: 300px;
+	padding: 5mm 12mm 5mm 16mm;
+	margin: 0px;
+}
+.header{
+	padding: 10mm 12mm 0mm 16mm;
+}
+
+h1, h2, h3, h4, h5, h6 {
+   padding: 2px 0px;
+   margin: 0px;
+   text-weight: bolder;
+}
+
+.logo {
+	width: 100px;
+	height: 100px;
+	float: left;
+	margin-left: 20px;
+}
+
+h3 {
+	font-size: 25px;
+}
+h4 {
+	font-size: 5mm;
+	
+}
+h5 {
+	font-size: 4.7mm;	
+}
+
+.right {
+	float: right;
+	text-align: right;
+	width: 100%;
+	margin-top: -14px;
+	
+}
+
+.center {
+
+	display: block;
+	font-size: 14px;
+	*width: 500px;
+	margin-left: -20px;
+	text-align:center
+}
+
+.kotakTandaTerima {
+	float: left;
+	text-transform: uppercase;
+	width: 200px;
+	border: 1px solid;
+	padding: 2px 5px;
+}
+
+hr {
+   clear: both;
+}
+
+img {
+   margin: 2px;
+}
+
+div.page-portrait-list {
+   visibility: visible;
+   font-family: Tahoma;
+   font-size: 11px;
+   margin: auto;
+   width: 19cm;
+}
+.tebal { font-weight: bold }
+ .foto {
+ width:25mm; 
+ height:30mm; 
+ display:table-cell;
+ vertical-align:middle; 
+ text-align:center; 
+ border:1px solid;
+ }
+.tembusan { font-size:15px}
+.ttd {font-size:18; line-height: 20px;}
+.ket {float:right; width:95%}

@@ -1,0 +1,196 @@
+<?php
+
+	class Libraryku
+	{
+		var $CI	= null;
+		function __construct()
+		{
+			$this->CI =& get_instance();
+			
+		}
+		
+		function cekinput($input)
+		{	
+			$filter = mysql_real_escape_string(strip_tags(htmlspecialchars($input,ENT_QUOTES)));
+			return $filter;
+		}
+		
+		function tanggal($tgl)
+		{
+			$tanggal = substr($tgl,8,2);
+			$bulan = $this->getBulan(substr($tgl,5,2));
+			$tahun = substr($tgl,0,4);
+			return $tanggal.' '.$bulan.' '.$tahun;	
+		}
+		function getBulan($bln){
+				switch ($bln){
+					case 1: 
+						return "Januari";
+						break;
+					case 2:
+						return "Februari";
+						break;
+					case 3:
+						return "Maret";
+						break;
+					case 4:
+						return "April";
+						break;
+					case 5:
+						return "Mei";
+						break;
+					case 6:
+						return "Juni";
+						break;
+					case 7:
+						return "Juli";
+						break;
+					case 8:
+						return "Agustus";
+						break;
+					case 9:
+						return "September";
+						break;
+					case 10:
+						return "Oktober";
+						break;
+					case 11:
+						return "November";
+						break;
+					case 12:
+						return "Desember";
+						break;
+				}
+			} 	
+		
+		
+		
+		function tanggalDbase($tgl)
+		{
+		
+			$tanggal = substr($tgl,0,2);
+			$bulan = substr($tgl,3,2);
+			$tahun = substr($tgl,6,4);
+			return $tahun.'-'.$bulan.'-'.$tanggal;		 
+	
+		}
+		
+		function editTanggalDbase($tgl)
+		{
+			$tanggal = substr($tgl,8,2);
+			$bulan = substr($tgl,5,2);
+			$tahun = substr($tgl,0,4);
+			return $tanggal.'-'.$bulan.'-'.$tahun;	
+		}
+		
+		
+		function format_rupiah($angka){
+			$rupiah=number_format($angka,0,',','.');
+			return "Rp. ". $rupiah;
+		}
+		
+		
+		
+		function selisihWaktu($jamSekarang,$jamMasuk)
+		{
+			$selisih = mysql_query("select timediff('$jamSekarang','$jamMasuk') as selisih");
+			$detailSelisih = mysql_fetch_array($selisih);
+			$selisih = $detailSelisih['selisih'];
+			return $selisih;
+		}
+		
+		
+		function selisih($jam_masuk,$jam_keluar,$stat=NULL) 
+		{ 
+			
+			list($h,$m,$s) = explode(":",$jam_masuk); 
+			$dtAwal = mktime($h,$m,$s,"1","1","1"); 
+			list($h,$m,$s) = explode(":",$jam_keluar); 
+			$dtAkhir = mktime($h,$m,$s,"1","1","1"); 
+			$dtSelisih = $dtAkhir-$dtAwal; $totalmenit=$dtSelisih/60; 
+			$jam =explode(".",$totalmenit/60);
+			$sisamenit=($totalmenit/60)-$jam[0]; 
+			$sisamenit2=$sisamenit*60; 
+			$jml_jam=$jam[0]; 
+			if ($stat == "cetak")
+			{
+				return $jml_jam." jam ".$sisamenit2." menit";
+			}
+			elseif ($stat == "jam") {
+				return $jml_jam;
+			}
+			elseif ($stat == "menit")
+			{
+				return $sisamenit2;
+			}
+			 
+		}
+		
+		
+		
+		/*
+		******** ini untuk upload gambar *****
+		*/
+			private $gambar = array('dir' => array ('original' => 'upload/album/original/',
+											    'thumb' => 'upload/album/thumb/'),
+								'total' => 0,
+								'images' => array(),
+								'error' => '');					
+		function upload()
+		{
+			$c_upload['upload_path'] = $this->gambar['dir']['original'];
+			$c_upload['allowed_types'] = 'gif|jpg|png|jpeg|x-png';
+			$c_upload['max_width'] = '1600';
+			$c_upload['max_height'] = '1200';
+			$c_upload['remove_spaces'] = TRUE;
+			$this->CI->load->library('upload', $c_upload);
+		}
+		function create_thumbnail()
+		{
+			$img = $this->CI->upload->data();
+			//create thumbnail
+			$new_image = $this->gambar['dir']['thumb'].'thumb_'.$img['file_name'];				
+			$c_img_lib = array(
+					'image_library' => 'gd2',
+					'source_image' => $img['full_path'],
+					'maintain_ratio' => TRUE,
+					'width' => 300,
+					'height' => 300,
+					'new_image' => $new_image
+				);				
+				$this->CI->load->library('image_lib',$c_img_lib);
+				$this->CI->image_lib->resize();	
+				//unlink($this->gambar['dir']['original'].$img['file_name']);
+		}
+		//untuk thumnailnya
+		
+		
+		
+		
+		function kodePemohon() {
+					$tahun = substr(date('Y'),2);
+					$bulan = date('m');
+					$query = mysql_query("select id_pemohon FROM tbl_pemohon ORDER BY id_pemohon DESC LIMIT 1");
+					if (mysql_num_rows($query) > 0)
+					{
+						$data  = mysql_fetch_array($query);
+						$potong_kode = substr($data['id_pemohon'],2);
+						$konversi_kode = (int)$potong_kode;
+						$kd_otomatis = $konversi_kode + 1;
+						$kode = $tahun.$bulan.$kd_otomatis;
+						
+						return $kode;
+					}
+					else {
+						return $tahun.$bulan."00001";	
+					}
+						
+		}
+					
+					
+						
+		
+		
+	}
+
+?>

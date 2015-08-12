@@ -1,0 +1,292 @@
+html, body { min-width:100%;
+height:100% 
+}
+/* CSS Document */
+/*body { margin:0; background-color:#B8B4CD;background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(#B8B4CD), to(#99CCCC)); font-family:Arial, Helvetica, sans-serif}*/
+/*body { margin:0; background-color:#B8B4CD;background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(#E4790E), to(#990000)); font-family:Arial, Helvetica, sans-serif; }*/
+
+.tabelisi td {
+padding: 5px;
+font-weight: bold;
+}
+.tabelisi {
+border: #718071 1px solid;
+}
+
+.tabelisi .rhead td{background-color:#009966; color:#FFFFFF; font-weight:bold; text-align:center; border:#CCFFCC 1px solid; padding:2px}
+.tabelisi .ritem td {  padding:2px 0 2px 10px; border:#CCCCCC 1px solid; padding:2px}
+.tabelisi tbody tr:hover {background-color:#0066FF}
+.tabelisi .aksi {border:#339933 1px solid; padding:2px; font-size:11px; letter-spacing:1px}
+.tabelisi .aksi:hover { background:#99CC00}
+
+.tabelisiKecil { padding:5px; border:#CCFFCC 1px solid; text-align:left; font-size:12px}
+.tabelisiKecil .rhead td{background-color:#009966; color:#FFFFFF; font-weight:bold; text-align:center; border:#CCFFCC 1px solid; padding:2px}
+.tabelisiKecil .ritem td { background-color:#99FF99; padding:2px 0 2px 10px; border:#CCFFCC 1px solid; padding:2px}
+.tabelisiKecil .aksi {border:#339933 1px solid; padding:2px; font-size:11px; letter-spacing:1px}
+.tabelisiKecil .aksi:hover { background:#99CC00}
+
+.tabelisiCetak { padding:5px; border:#000000 1px solid; text-align:left; font-size:11px}
+.tabelisiCetak .rhead td{background-color:#009966; font-weight:bold; text-align:center; border:#000000 1px solid; padding:2px}
+.tabelisiCetak .ritem td { background-color:#99FF99; padding:2px 0 2px 10px; border:#000000 1px solid; padding:2px}
+.tabelisiCetak .aksi {border:#339933 1px solid; padding:2px; font-size:11px; letter-spacing:1px}
+.tabelisiCetak .aksi:hover { background:#99CC00}
+
+.tabelbesar { padding:5px; border:#999999 1px solid}
+.tabelbesar .rhead td{background-color:#CEDDCA; font-weight:bold; text-align:center; border:#999999 1px solid;}
+.tabelbesar .ritem td { background-color:#CCCCE1; padding:2px 0 2px 10px; border:#999999 0.09em solid; font-size:11px}
+.tabelbesar .aksi {border:#339933 1px solid; padding:1px; font-size:11px; letter-spacing:1px; background:#FFFFCC}
+.tabelbesar .aksi:hover { background:#99CC00}
+.tabelbesar .satu td { background-color:#E1F2FB}
+.tabelbesar .dua td { background-color:#D7D8FB}
+
+.standar td {padding:7px 5px 7px 5px;}
+.standar td a {color:#003399;}
+
+
+.bodi {min-width:100%; border:none; height:100%} 
+#tabelroot { width:100%;}
+#tabelroot td { vertical-align:top; padding: 0 10px 0 10px}
+#header {float:left; width:100%; height:125px}
+	.banhead {background:url(../img/h1.gif)}
+
+#headerBanner { background: -webkit-gradient(linear, 50% 50%, 0% 0%, from(#CCCCCC), to(#99CCCC)); padding:5px 0 10px 20px}
+/*//////////// LOGIN ///////////////*/
+#bodilog { background-image: url(../img/back_login.gif);}
+#loginheader {font-size:30px; font-weight:700; background-repeat:repeat-y; text-align:center; padding:0px 0px 10px 0px; }
+/*//////////////////////////////////*/
+#banner {vertical-align:middle; font: "Courier New", Courier, monospace; font-size:30px; top:5px; float:right; text-align:left; width:90%; padding:20px 0 0 0px; color:#336633; text-shadow:#CCCCCC}
+
+.lpus { width:100%}
+#pusat .box1 {float:left; background: url(../img/web-uin_13.gif) top repeat-x;}
+#pusat .box2 {float:left; background: url(../img/web-uin_30.gif) bottom repeat-x;}
+#pusat .box3 {float:left; background:#DCECFB url(../img/web-uin_16.gif) repeat-y;}
+#pusat .box4 {float:left; background:#DCECFB; }
+
+.lprof { width:250px }
+#profil .box1 {float:left; background: url(../img/web-uin_05.gif) top repeat-x;}
+#profil .box2 {float:left; background: url(../img/web-uin_20.gif) bottom repeat-x;}
+#profil .box3 {float:left; background:#E2E6E5 url(../img/web-uin_08.gif) repeat-y;}
+#profil .box4 {float:left; background:#E2E6E5 url(../img/web-uin_10.gif) right repeat-y; width:239px }
+#profil li { list-style:none; font-weight:bold; text-align:center}
+
+.lmenkan { width:250px }
+#menuatas { -webkit-box-shadow: 0px 0px 10px 2px #000; background:  url(../img/texture1.png); width:100%; float:left; color:#CCCCCC; text-align:right; font-size:14px; font-weight:bold; word-spacing:10px; }
+#menuatas a:link, #menuatas a:visited { color:#FFFF00; text-decoration:none}
+#menuatas a:hover {color: #CCCCCC}
+#menuatas div { padding:5px;padding-right:100px}
+
+#menukan .box1 {float:left; background: url(../img/web-uin_24.gif) top repeat-x;}
+#menukan .box2 {float:left; background: url(../img/web-uin_34.gif) bottom repeat-x;}
+#menukan .box3 {float:left; background:#BEF1E5 url(../img/web-uin_26.gif) repeat-y;}
+#menukan .box4 {float:left; background:#BEF1E5 url(../img/web-uin_28.gif) right repeat-y; width:239px }
+#menukan ul {list-style:none;} 
+#menukan a { text-decoration:none; color:#0000CC; font-size:12px; font-family:Geneva, Arial, Helvetica, sans-serif; font-weight:bold}
+#menukan a:hover {color:#CC0000}
+#footer{background:#F2F2F2; text-align:center; width:100%; float:left; bottom:0px; border-top:#C5C5C5 1px solid; }
+
+.boxtext { padding:10 20px 5px 20px; font-family:Arial, Helvetica, sans-serif; text-align:justify; font-size:14px;}
+
+.box4 .gbr {text-align:center;}
+.kethal {text-align:right; font-family:"Arial Black"; font-size:14px; padding:0 50px 15px 0}
+
+/*///////////////////////////////////*/
+.tabel_1 {width:80%; border-top:1px solid;}
+.Rhijau TD { background-color:#99CC66; border:1px #999999 solid;  height:30px; font-family:"Courier New", Courier, monospace; font-size:16px}
+.Rhijau2 TD { background-color:#CCFF99; border:1px #999999 solid; border-top:none; font-family:"Courier New", Courier, monospace; font-size:14px}
+/*///////////////////////////////////*/
+#bodikiri {width:300px; background:#EBEBEB; vertical-align:top; z-index:999} 
+#bodikiri .menuutama {  font-family:Arial; color:#62462B; font-weight:bold; padding:10px 5px 5px 20px}
+#bodikiri .menuatas2 {  font-family:Arial; color:#62462B; font-weight:bold; background-color:#C5C0D1; padding:10px 5px 5px 20px; width:300px}
+#bodikiri a { text-decoration:none; color:#62462B; font-weight:normal; } 
+#bodikiri li {line-height:25px; border-bottom:#F0F0F0 1px solid}
+#bodikiri .menuatas2 li { border-bottom:none;}
+
+#bodikanan {width:auto; background:#FFFFFF; vertical-align:top;border-left:#C5C5C5 1px solid;} 
+
+.tulisan {font-family:Arial, Helvetica, sans-serif; font-size:12px }
+.tulisan1 {float:left; width:100%;}
+.tulisan .tema, .tulisan .tema li {list-style-image:url(../images/bulletjudul.gif)}
+.tulisan .tema, .tulisan .tema a {font-size:15px; color:#999900; font-weight:bold}
+.tulisan .judul { font-size:14px; color:#990000; font-weight:bolder; padding:0px 0px 10px 10px}
+.tulisan .ket {color:#000000; padding-left:10px}
+.tulisan .ket2 {color:#FFFFFF}
+
+.isi { z-index:0;
+    font-size:16; 
+    padding-right: 10px;
+	padding-left: 10px;
+	padding-top: 10px;
+	padding-bottom:15px;
+    text-align:justify
+}
+.isi .gbr {float:left; padding:0px 10px 10px 10px; margin-right:10px}
+.isi2 .gbr {float:left; padding:0px 10px 20px 10px; z-index:99; margin-right:10px;  }
+.isi a {text-decoration:none; color:#990000; font-weight:lighter}
+.tulisan .judul2 {width:100%; float:left; font-size:13px; color:#006699; padding-left:10px}
+.isi2 ul, .isi2 ul a{ margin-top:1px; list-style-image:url(../images/web-uin_47.gif); color:#990000; margin-bottom:0px; text-decoration:none}
+/*///////////////////////////////////////////*/
+.kal a {text-decoration:none; font-size:10px}
+.kal a:hover { color:#FFFFFF; background:#00CC33}
+.tabelkal {font-size:12px}
+.kaltg1 {color:#FF0000}
+.kaltg2 {color:#0000FF}
+.kaltg3 {color:#000000}
+.tabelheader {background:url(../images/banner-tabel.gif); font:"Times New Roman", Times, serif; font-size:12px; color:#FFFFFF; text-align:center}
+.tabelheader td {border:1px #F7F7F7 solid; border-right:none; height:30px}
+.tabelMHS { overflow:scroll} 
+.mati { background-color:#CCCCCC}
+.aktif { background-color:#999999}
+
+.boxtext a {text-decoration:none; }
+.linkproses {float:left}
+.linkproses a {text-decoration:none; color:#FFFFFF; background-color:#0000CC; font-weight:bold; padding:0 5px 0 5px; line-height:1.5}
+.menueis a{ color:#990000; text-decoration:none}
+.headeis { font-weight:bold}
+.finput TR { height:35px}
+
+.Tinput { background-color:#D7D8FB}
+.Tinput .rhead td{ border-bottom:#C4BEEF 1px solid; padding: 5px 5px 5px 5px  }
+.Tinput .ritem td{ border-bottom:#C4BEEF 1px solid; padding: 5px 5px 5px 5px }
+
+.TinputHead { background-color:#D7D8FB}
+.TinputHead .rhead td{ border-bottom:#C4BEEF 1px solid; padding: 5px 5px 5px 5px; background-color:#0099FF}
+.TinputHead .ritem td{ border-bottom:#C4BEEF 1px solid; padding: 5px 5px 5px 5px }
+
+.Tinputkecil { font-size:12px}
+.Tinputkecil .rhead td{ background-color:#00CCCC; border-bottom:#C4BEEF 1px solid; padding: 5px 5px 5px 5px; text-align:center; font-weight:bold; font-size:14px}
+.Tinputkecil .ritem td{ border-bottom:#C4BEEF 1px solid; padding: 0px 5px 0px 5px }
+.Tinputkecil .satu td { background-color:#E1F2FB}
+.Tinputkecil .dua td { background-color:#D7D8FB}
+
+.Tinput_kecil { font-size:10px}
+.Tinput_kecil .rhead td{ background-color:#00CCCC; border-bottom:#C4BEEF 1px solid; padding: 5px 5px 5px 5px; text-align:left; font-weight:bold; font-size:12px}
+.Tinput_kecil .ritem td{ border-bottom:#C4BEEF 1px solid; padding: 0px 5px 0px 5px }
+.Tinput_kecil .satu td { background-color:#E1F2FB}
+.Tinput_kecil .dua td { background-color:#E1F2FB}
+.Tinput_kecil .td select{font-size:10px; height:auto}
+.loginheader { text-align:center; }
+.logintengah {  text-align:center; background:url(../img/simbad.png) no-repeat center; float:left; width:100%; height:600px; }
+.logintengah .log { padding-top:435px; font-size:24px; color:#990000}
+.logPemkot { padding-top:300px; font-size:18px; color:#FFFFFF; padding-left:100px; }
+.Tlogin {text-align:Left; padding-left:70px}
+.w {width:500px}
+.popup {position:fixed; display:block;  
+background:#00CCCC; 
+border-radius:5px 5px 0 0; 
+-moz-box-shadow: 1px 1px 20px 0px #000; 
+-webkit-box-shadow: 1px 1px 20px 0px #000; 
+padding:2px 2px 2px 2px;  
+*background-image:url(../img/biru.png); 
+*background-color:transparent;
+z-index:1036; cursor:move}
+.isipopup {background:#EAEADF; padding:10px; border-right:1px solid #00FFFF; border-left:1px solid #00FFFF; border-bottom:1px solid #00FFFF; cursor:move}
+.closepopup { text-align:right; padding-right:2px;}
+.closepopup div {background-color:#990000; float:right; border-radius:10px 10px; width:19px; height:18px; text-align:center; color:#FFFFFF; font-weight:bold; vertical-align:middle; padding-bottom:1px; cursor:pointer}
+.closepopup div:hover { background-color:#660000;}
+.lblpopup {width:60px; float:left}
+/*////////////////////////////////////////////////*/
+.tbhOpsi {background-color:#CCCC33; float:left; font-weight:bold; padding:0px 3px 0px 5px; border-radius:5px 5px; cursor:pointer;}
+.floatRight {float:right}
+.tengah {text-align:center; background:none}
+.backKuning{background-color:#FFFF99; color:#000000; font-weight:bold; text-align:center; border:#CCFFCC 1px solid } 
+.backGray{background-color:#CCCCCC; color:#000000; font-weight:bold; text-align:center; border:#CCFFCC 1px solid } 
+/*/////////////////////*/
+.kalender { padding:5px; border:#CCFFCC 1px solid}
+.kalender .rhead td{background-color:#009966; color:#FFFFFF; font-weight:bold; text-align:center; border:#CCFFCC 1px solid}
+.kalender .ritem td { background-color:#33CCCC; padding:2px 0 2px 10px; border:#CCFFCC 1px solid; text-align:center }
+.kalender .ritem td:hover { background-color:#CCCCCC; padding:2px 0 2px 10px; border:#CCFFCC 1px solid; text-align:center }
+.kalender a { font-weight:bold; color:#000000}
+.kalender a:hover {color:#FF0000}
+.kalhari td { background-color:#0066FF; text-align:center;border:#CCFFCC 1px solid; color:#FFFFFF; font-weight:bold}
+.Tright {text-align:right; font-weight:bold}
+.Tleft {text-align:left;}
+.tebal { font-weight:bold}
+.linkSelected { color:#990000; }
+
+.buttonMenu { 
+	display: block;
+	padding: 0;
+	margin: 0;
+	height: 20px;
+	z-index: 100;
+ 	position: relative;
+	width: 100%;
+	list-style: none;
+	text-align: center;
+	left : 0;
+	margin-top:5px; 
+} 
+.buttonMenu li {	
+	text-align: center;
+	display: block;
+	float: left;
+	
+	margin: 0;
+	padding: 0;
+  position: relative;
+  width:15%;
+
+ }
+.buttonMenu a {
+color:#000000
+}
+
+.buttonMenu li a:hover {	
+  color:#990000; font-weight:bold
+ }
+ 
+.hidden { visibility:hidden}
+.rowData {background:#009999}
+.padL20 { padding-left:20px;}
+.padL30 { padding-left:35px;}
+.padL40 { padding-left:50px;}
+
+.submitReset {
+width: 130px;
+height: 130px;
+background: url(../../assets/img/reset.png) no-repeat;
+border: none;
+}
+
+.submitNext {
+width: 130px;
+height: 130px;
+background: url(../../assets/img/next.png);
+border: none;
+}
+
+.submitLoop {
+width: 130px;
+height: 130px;
+background: url(../../assets/img/ulang.png);
+border: none;
+}
+.idBidangUsaha {
+font-size: 12px;
+border-bottom: 1px solid;
+float: left;
+width: 90%;
+}
+
+.idBidangUsaha [br] {
+line-height: 2;
+}
+
+.radioBidangUsaha {
+float: left;
+}
+.closeTag {
+background:yellow; padding:0 5px 0 5px; font-weight:bold; float: right; cursor: pointer;
+}
+
+.iconexport
+{
+	padding:8px
+	
+}
+
+.iconexport img:hover
+{
+	width:60px;
+	height:60px;		
+}
