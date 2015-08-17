@@ -23,6 +23,21 @@
 		{
 			return $this->db->count_all($this->table);
 		}
+
+
+
+		function ubah_status($id, $data) {
+			$this->db->where('pinjaman_detail_id', $id);
+			if ($this->db->update('perpustakaan_pinjaman_detail', $data))
+			{
+				return TRUE;				
+				}
+			else {
+				return FALSE;				
+				}
+		}
+
+
 		
 
 		function get_data_by_session($session)

@@ -69,8 +69,8 @@ class Pengembalian extends CI_Controller {
 		//parse variabel
 		//$kode_anggota = $this->input->post('kode_anggota');
 		//$kode_peminjaman	  = $this->input->post('kode_peminjaman');
-		$kode_peminjaman	  = '768590644';
-		
+		$kode_peminjaman	  = $this->input->post('kode_peminjaman');
+		$this->session->set_userdata('kode_peminjaman', $kode_peminjaman);
 		$data['jumlah']     = $this->pengembalian->get_identitas_peminjaman_by_kode_unik($kode_peminjaman)->num_rows;
 		$data['query'] = $this->pengembalian->get_identitas_peminjaman_by_kode_unik($kode_peminjaman)->result();
 		
@@ -79,17 +79,23 @@ class Pengembalian extends CI_Controller {
 	}
 
 
-	function selesai_temp() {
+	function ubah_status() {
 		
-		//$this->pengembalian->add($dataBuku);
-		$data['session_id']= $this->session->userdata('session_id');
-		$session_id = $data['session_id'];
-		$data['form_action'] = site_url('pengembalian/cetak_temp');		
-		//untuk data anggota
-		$jumlah_temp     = $this->pengembalian->get_all_data_by_session($session_id);
-		$data['temp'] = $this->pengembalian->get_data_by_session($session_id)->result();
-		$data['main_view']	= "pengembalian/pengembalian_all_temp";
-		$this->load->view('template', $data);
+		$detail_buku	  = $this->input->post('kode_peminjaman');
+		$kode_peminjaman = $this->session->userdata('kode_peminjaman');
+		$date_now = date('Y-m-d');
+		$data_status = array(
+			'status_buku'	=> 'kembali',
+			'pinjaman_tgl_kembali'	=> $date_now
+		);
+		//hapus datanya
+		$this->pengembalian->ubah_status($detail_buku, $data_status);
+		
+		$data['jumlah']     = $this->pengembalian->get_identitas_peminjaman_by_kode_unik($kode_peminjaman)->num_rows;
+		$data['query'] = $this->pengembalian->get_identitas_peminjaman_by_kode_unik($kode_peminjaman)->result();
+		
+	
+		$this->load->view('pengembalian/data_temp_pengembalian', $data);
 		
 	}
 

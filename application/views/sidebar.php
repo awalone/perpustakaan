@@ -3,42 +3,11 @@
 	try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
 </script>
 
-<div class="sidebar-shortcuts" id="sidebar-shortcuts">
-	<div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
-		<button class="btn btn-success">
-			<i class="ace-icon fa fa-signal"></i>
-		</button>
 
-		<button class="btn btn-info">
-			<i class="ace-icon fa fa-pencil"></i>
-		</button>
-
-		
-		
-		<a  href="?id=list_user" class="btn btn-warning">
-			<i class="ace-icon fa fa-users"></i>
-		</a>
-						
-
-		<button class="btn btn-danger">
-			<i class="ace-icon fa fa-cogs"></i>
-		</button>
-	</div>
-
-	<div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
-		<span class="btn btn-success"></span>
-
-		<span class="btn btn-info"></span>
-
-		<span class="btn btn-warning"></span>
-
-		<span class="btn btn-danger"></span>
-	</div>
-</div><!-- /.sidebar-shortcuts -->
 
 <ul class="nav nav-list">
 <li class="active">
-	<a href="?id=home">
+	<a href="<?php echo site_url();?>">
 		<i class="menu-icon fa fa-tachometer"></i>
 		<span class="menu-text"> Dashboard </span>
 	</a>
@@ -138,112 +107,6 @@
 </li>
 
 
-
-<li class="">
-	<a href="#" class="dropdown-toggle">
-		<i class="menu-icon fa 	fa-users"></i>
-		<span class="menu-text"> Data Pegawai </span>
-
-		<b class="arrow fa fa-angle-down"></b>
-	</a>
-	<b class="arrow"></b>
-
-	<ul class="submenu">
-		<li class="">
-			<a href="<?php echo site_url();?>/pegawai">
-				<i class="menu-icon fa fa-caret-right"></i>
-				Daftar Pegawai
-			</a>
-
-			<b class="arrow"></b>
-		</li>
-
-		<li class="">
-			<a href="<?php echo site_url();?>/pegawai/add">
-				<i class="menu-icon fa fa-caret-right"></i>
-				Input Data Pegawai
-			</a>
-
-			<b class="arrow"></b>
-		</li>
-	</ul>
-</li>
-
-
-
-<li class="">
-	<a href="#">
-		<i class="menu-icon fa fa-picture-o"></i>
-		<span class="menu-text"> Gallery </span>
-	</a>
-
-	<b class="arrow"></b>
-</li>
-
-<li class="">
-	<a href="#" class="dropdown-toggle">
-		<i class="menu-icon fa fa-tag"></i>
-		<span class="menu-text"> More Pages </span>
-
-		<b class="arrow fa fa-angle-down"></b>
-	</a>
-
-	<b class="arrow"></b>
-
-	<ul class="submenu">
-		<li class="">
-			<a href="#">
-				<i class="menu-icon fa fa-caret-right"></i>
-				Setting
-			</a>
-			<b class="arrow"></b>
-		</li>
-
-		<li class="">
-			<a href="media.php?id=list_user">
-				<i class="menu-icon fa fa-caret-right"></i>
-				List User
-			</a>
-			<b class="arrow"></b>
-		</li>
-
-		<li class="">
-			<a href="#">
-				<i class="menu-icon fa fa-caret-right"></i>
-				Pengumuman
-			</a>
-			<b class="arrow"></b>
-		</li>
-
-		<li class="">
-			<a href="#">
-				<i class="menu-icon fa fa-caret-right"></i>
-				Backup Restore
-			</a>
-
-			<b class="arrow"></b>
-		</li>
-
-		<li class="">
-			<a href="">
-				<i class="menu-icon fa fa-caret-right"></i>
-				Export Excel
-			</a>
-
-			<b class="arrow"></b>
-		</li>
-
-		<li class="">
-			<a href="logout.php" id="logout" onclick="return confirm('Apakah Anda yakin?')">
-				<i class="menu-icon fa fa-caret-right"></i>
-				Logout
-			</a>
-
-			<b class="arrow"></b>
-		</li>
-		
-	</ul>
-</li>
 
 
 </ul><!-- /.nav-list -->

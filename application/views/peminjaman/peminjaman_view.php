@@ -102,7 +102,7 @@
 
 
 		<div class="table-header">
-			Semua Daftar Data Jenis Buku
+			Semua Daftar Transaksi Peminjaman Buku
 		</div>
 
 

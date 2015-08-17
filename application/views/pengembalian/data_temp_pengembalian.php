@@ -57,7 +57,7 @@
 				<td><?php echo $row->buku_pengarang;?></td>
 				<td><?php echo $row->pinjaman_tanggal_pinjam;?></td>
 				<td><?php echo $row->pinjaman_tanggal_kembali;?></td>
-				<td><?php echo 'status';?></td>
+				<td><?php echo $row->status_buku;?></td>
 				<td><?php echo '';?></td>
 			<?php
 			echo "</tr>";

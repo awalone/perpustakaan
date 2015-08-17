@@ -30,6 +30,8 @@
 							
 								<table class="table" style="size: 50%">
 									<tr>
+										<th>No</th>
+										<th>Kode</th>
 										<th>Judul Buku</th>
 										<th>Kategori Buku
 									</tr>

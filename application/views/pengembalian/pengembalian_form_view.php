@@ -45,8 +45,8 @@ margin-bottom:5px;
 					
 				},
 				cache: true,
-				success: function(html){
-					$("#show").after(html);
+				success: function(data){
+					$("#show").html(data);
 					$("#flash").hide();
 				}  
 			});
@@ -65,6 +65,19 @@ margin-bottom:5px;
             $(document).on('click', '.pilih', function (e) {
                var kode = $(this).attr('detail_id');
                alert(kode);
+               $.ajax({
+               	type: "POST",
+               	url: "<?php base_url();?>pengembalian/ubah_status",
+               	data : {
+               		kode_peminjaman: kode
+               	},
+               	cache: false,
+               	success: function(data){
+               		$("#show").html(data);
+               		$("#flash").hide();
+               	}
+               });
+               return true;
                 
             });
 

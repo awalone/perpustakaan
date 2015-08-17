@@ -33,8 +33,9 @@ margin-bottom:5px;
 
 	$(function(){
 		$(".save_temp").click(function(){
-			var kode_anggota = $("#nama").val();
-			var kode_buku    = $("#judul").val();
+			var kode_anggota = $("#kode-anggota").val();
+			var kode_buku    = $("#kode-buku").val();
+			
 			var session_id   = $("#session_id").val();
 			$("#flash").show();
 			$("#flash").fadeIn(400).html('<span class="load">Loading..</span>');
@@ -94,6 +95,7 @@ margin-bottom:5px;
 									<label class="col-sm-3 control-label no-padding-right" for="nama">Data Anggota:</label> 
 									<div class="col-sm-7">
 										<input type="text" name="nama" id="nama" class="col-xs-10 col-sm-5" placeholder="Data Anggota" value="">
+										<input type="hidden" name="kode-anggota" id="kode-anggota" value="" />
 										&nbsp;&nbsp;<button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal"><b>Cari</b> <span class="glyphicon glyphicon-search"></span></button>
 									</div>
 								</div>
@@ -103,6 +105,7 @@ margin-bottom:5px;
 									<label class="col-sm-3 control-label no-padding-right" for="nama">Judul Buku:</label> 
 									<div class="col-sm-7">
 										<input type="text" name="judul" id="judul" class="col-xs-10 col-sm-5" placeholder="Judul Buku" value="">
+										<input type="hidden" name="kode-buku" id="kode-buku" value="" />
 										&nbsp;&nbsp;<button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal1"><b>Cari Buku</b> <span class="glyphicon glyphicon-search"></span></button> <input class="btn btn-success btn-big btn-next save_temp" type="button" name="kirim_daftar" value="Input">
 									</div>
 								</div>								
@@ -157,39 +160,36 @@ margin-bottom:5px;
 
 
 								<!-- Modal -->
-								<!--
-						        <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-						            <div class="modal-dialog" style="width:800px">
-						                <div class="modal-content">
-						                    <div class="modal-header">
-						                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						                        <h4 class="modal-title" id="myModalLabel">Judul Buku</h4>
-						                    </div>
-						                    <div class="modal-body">
-						                        <table id="lookup" class="table table-bordered table-hover table-striped">
+								<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" style="width:800px">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Data Buku</h4>
+                    </div>
+                    <div class="modal-body">
+                        <table id="lookup" class="table table-bordered table-hover table-striped">
 						                            <thead>
 						                                <tr>
-						                                    <th>Kode</th>
-						                                    <th>Judul</th>
+						                                    <th>Kode Buku</th>
+						                                    <th>Judul Buku</th>
 															<th>Pengarang</th>
-															<th>Penerbit</th>
 						                                </tr>
 						                            </thead>
 						                            <tbody>
 						                                <?php
 
-						                              /*
+						                              
 						                               foreach($buku as $ags) {
 						                                    ?>
-						                                    <tr class="pilih" data-nims="<?php echo $ags->buku_id; ?>" data-judul="<?php echo $ags->buku_judul;?>">
+						                                    <tr class="pilih-buku" data-id-buku="<?php echo $ags->buku_id; ?>" data-judul="<?php echo $ags->buku_judul;?>">
 						                                        <td><?php echo $ags->buku_kode; ?></td>
 						                                        <td><?php echo $ags->buku_judul; ?></td>
 																<td><?php echo $ags->buku_pengarang; ?></td>
-																<td><?php echo $ags->buku_penerbit; ?></td>
 						                                    </tr>
 						                                    <?php
 						                                }
-						                                */
+						                                
 						                                ?>
 						                            </tbody>
 						                        </table>  
@@ -197,39 +197,44 @@ margin-bottom:5px;
 						                </div>
 						            </div>
 						        </div>
-						    -->
+								<!-- end modal buku-->	
 
-						        <!--
-						        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-						            <div class="modal-dialog" style="width:800px">
-						                <div class="modal-content">
-						                    <div class="modal-header">
-						                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						                        <h4 class="modal-title" id="myModalLabel">Judul Buku</h4>
-						                    </div>
-						                    <div class="modal-body">
-						                        <table id="lookup" class="table table-bordered table-hover table-striped">
+
+
+
+
+
+						        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" style="width:800px">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Lookup Mahasiswa</h4>
+                    </div>
+                    <div class="modal-body">
+                        <table id="lookup" class="table table-bordered table-hover table-striped">
 						                            <thead>
 						                                <tr>
 						                                    <th>Kode Anggota</th>
-						                                    <th>Nama Anggota</th>
-															<th>JKelamin</th>
+						                                    <th>Nama Lengkap</th>
+															<th>NIM</th>
 						                                </tr>
 						                            </thead>
 						                            <tbody>
 						                                <?php
 
-						                              /*
-						                               foreach($anggota as $agss) {
+						                              
+						                               foreach($anggota as $ags) {
 						                                    ?>
-						                                    <tr class="pilih" data-anggota_id="<?php echo $agss->anggota_id; ?>" data-nama="<?php echo $agss->anggota_nama;?>">
-						                                        <td><?php echo $agss->anggota_kode; ?></td>
-						                                        <td><?php echo $agss->anggota_nama; ?></td>
-																<td><?php echo $agss->anggota_jkel; ?></td>
+						                                    <tr class="pilih" data-id-anggota="<?php echo $ags->anggota_id; ?>" data-nama="<?php echo $ags->anggota_nama;?>">
+						                                        <td><?php echo $ags->anggota_kode; ?></td>
+						                                        <td><?php echo $ags->anggota_nama; ?></td>
+																<td><?php echo $ags->anggota_nim; ?></td>
 						                                    </tr>
 						                                    <?php
 						                                }
-						                                */
+						                                
 						                                ?>
 						                            </tbody>
 						                        </table>  
@@ -237,12 +242,10 @@ margin-bottom:5px;
 						                </div>
 						            </div>
 						        </div>
+						    
 
+						        
 
-
-
-								</div>
-								</div>
 				
 	
 <!-- PAGE CONTENT ENDS -->
