@@ -128,7 +128,7 @@ class Peminjaman extends CI_Controller {
 				'pinjaman_detail_id_order' => $id_orders,
 				'pinjaman_detail_buku' => $row->temp_id_buku
 			);
-			echo $id_orders;
+			
 			$this->peminjaman->add_pinjam_detail($dataPinjamDetail);
 		}
 

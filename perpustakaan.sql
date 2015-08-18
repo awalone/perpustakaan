@@ -30,7 +30,7 @@ CREATE TABLE `perpustakaan_anggota` (
   `anggota_foto` varchar(200) NOT NULL,
   `anggota_kode` varchar(100) NOT NULL,
   PRIMARY KEY (`anggota_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 
 /*Table structure for table `perpustakaan_buku` */
 
@@ -53,7 +53,7 @@ CREATE TABLE `perpustakaan_buku` (
   PRIMARY KEY (`buku_id`),
   KEY `FK_kategori` (`buku_jenis`),
   CONSTRAINT `perpustakaan_buku_ibfk_1` FOREIGN KEY (`buku_jenis`) REFERENCES `perpustakaan_jenis_buku` (`jenis_buku_id`) ON DELETE NO ACTION ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 /*Table structure for table `perpustakaan_denda` */
 
